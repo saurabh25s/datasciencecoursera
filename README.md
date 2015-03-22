@@ -1,21 +1,17 @@
-This repository contains my work for the course project for the Coursera course "Getting and Cleaning data", part of the Data Science specialization. What follows first are my notes on the original data.
+#Course Project
 
-#About the raw data
+You should create one R script called run_analysis.R that does the following.
 
-The features (561 of them) are unlabeled and can be found in the x_test.txt. The activity labels are in the y_test.txt file. The test subjects are in the subject_test.txt file.
+Merges the training and the test sets to create one data set.
+Extracts only the measurements on the mean and standard deviation for each measurement.
+Uses descriptive activity names to name the activities in the data set
+Appropriately labels the data set with descriptive activity names.
+Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+#Steps to work on this course project
 
-The same holds for the training set.
+Download the data source and put into a folder on your local drive. You'll have a UCI HAR Dataset folder.
+Put run_analysis.R in the parent folder of UCI HAR Dataset, then set it as your working directory using setwd() function in RStudio.
+Run source("run_analysis.R"), then it will generate a new file tiny_data.txt in your working directory.
+#Dependencies
 
-#About the script and the tidy dataset
-
-I created a script called run_analysis.R which will merge the test and training sets together. Prerequisites for this script:
-
-the UCI HAR Dataset must be extracted and..
-the UCI HAR Dataset must be availble in a directory called "UCI HAR Dataset"
-After merging testing and training, labels are added and only columns that have to do with mean and standard deviation are kept.
-
-Lastly, the script will create a tidy data set containing the means of all the columns per test subject and per activity. This tidy dataset will be written to a tab-delimited file called tidy_data.txt, which can also be found in this repository.
-
-#About the Code Book
-
-The CodeBook.md file explains the transformations performed and the resulting data and variables.
+run_analysis.R file will help you to install the dependencies automatically. It depends on reshape2 and data.table.
